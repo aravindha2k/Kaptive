@@ -15,6 +15,10 @@ app.get("/", (req,res)=>{
     res.send("This is homePage and Server is running successfully")
 })
 
+app.get("/auto", (req,res)=>{
+    res.send("checking auto deployment in render")
+})
+
 
 app.listen(port, async()=>{
     try {
