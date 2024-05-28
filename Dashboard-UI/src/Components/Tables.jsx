@@ -1,10 +1,9 @@
 import React from 'react'
-import data from '../data.json'
+import data from "../data.json"
 
-const MainContent = () => {
+const Tables = () => {
     // console.log(data);
-    const {Sheet1} = data;
-    // console.log(Sheet1);
+    const{Sheet1} = data
   return (
     <>
     <div>MainContent</div>
@@ -17,4 +16,4 @@ const MainContent = () => {
   )
 }
 
-export default MainContent
+export default Tables

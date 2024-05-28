@@ -1,17 +1,17 @@
-import React from 'react'
-import SideBar from '../Components/SideBar'
-import MainContent from '../Components/MainContent'
-import '../styles/DashBoard.css'
+import React from 'react';
+import { Box, Flex } from "@chakra-ui/react";
+import { Outlet } from "react-router-dom";
+import Sidebar from '../Components/SideBar';
 
-const DashBoard = () => {
+const DashBoard = ({ onLogout }) => {
   return (
-    <div className='dashboard'>
-        <SideBar />
-        <div className='mainContent'>
-            <MainContent />
-        </div>
-    </div>
-  )
-}
+    <Flex>
+      <Sidebar onLogout={onLogout} />
+      <Box w="80%" p={5}>
+        <Outlet />
+      </Box>
+    </Flex>
+  );
+};
 
-export default DashBoard
+export default DashBoard;
